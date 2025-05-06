@@ -1,0 +1,11 @@
+id             = "code-runner"
+name           = "Code Runner"
+version        = "0.1.0"
+schema_version = 1
+authors        = ["Kishan Dev <kishandev2509@gmail.com>"]
+description    = "Run your current script, file, or project with one keypress."
+repository     = "https://github.com/kishandev2509/code-runner"
+
+# no slash_commands; we’ll register as a context server
+[context_servers.runner]
+command = ["./code-runner-server"]

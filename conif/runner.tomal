@@ -1,0 +1,17 @@
+# language → command
+[languages]
+python      = "python {path}"
+javascript  = "node {path}"
+rust        = "cargo run"
+
+# file extension → command
+[files]
+".py"        = "python3 {path}"
+".js"        = "node {path}"
+".ts"        = "ts-node {path}"
+
+# project type → command
+[projects]
+node         = "npm start"
+python       = "poetry run python {path}"
+rust         = "cargo run"
