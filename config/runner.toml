@@ -1,0 +1,26 @@
+# Language-specific run commands
+[languages]
+python = "python {path}"
+javascript = "node {path}"
+typescript = "ts-node {path}"
+rust = "rustc {path} -o {dir}/output && {dir}/output"
+go = "go run {path}"
+java = "javac {path} && java -cp {dir} {path}"
+cpp = "g++ {path} -o {dir}/output && {dir}/output"
+c = "gcc {path} -o {dir}/output && {dir}/output"
+
+# File extension mappings
+[files]
+".py" = "python {path}"
+".js" = "node {path}"
+".ts" = "ts-node {path}"
+".rs" = "rustc {path} -o {dir}/output && {dir}/output"
+".go" = "go run {path}"
+".java" = "javac {path} && java -cp {dir} {path}"
+".cpp" = "g++ {path} -o {dir}/output && {dir}/output"
+".c" = "gcc {path} -o {dir}/output && {dir}/output"
+
+# Keyboard shortcuts
+[keybindings]
+"cmd+r" = "code-runner.run"       # macOS
+"ctrl+r" = "code-runner.run"      # Windows/Linux
